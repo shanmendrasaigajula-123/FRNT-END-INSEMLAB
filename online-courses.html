@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Learning Platform</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, lightblue, purple);
+            margin: 0;
+            text-align: center;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card,information {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+
+        button {
+            padding: 10px 15px;
+            background: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        
+
+        @media (max-width: 600px) {
+            .courses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>LearnHub</h1>
+        <p>Learn New Skills Online</p>
+    </header>
+
+    <div class="courses">
+
+        <div class="card">
+            <h2>Frontend Development</h2>
+            <p>Instructor: RAM</p>
+            <p>Duration: 8 Weeks</p>
+            <h3>1500</h3>
+            <button onclick="enroll('Frontend Development', 999)">Enroll</button>
+        </div>
+
+        <div class="card">
+            <h2>Operating Systems</h2>
+            <p>Instructor: Ramu</p>
+            <p>Duration: 6 Weeks</p>
+            <h3>1800</h3>
+            <button onclick="enroll('Operating Systems', 799)">Enroll</button>
+        </div>
+
+        <div class="card">
+            <h2>Java Programming</h2>
+            <p>Instructor: Rajesh</p>
+            <p>Duration: 8 Weeks</p>
+            <h3>1300</h3>
+            <button onclick="enroll('Java Programming', 999)">Enroll</button>
+        </div>
+
+        <div class="card">
+            <h2>Java OOP</h2>
+            <p>Instructor: RAVI</p>
+            <p>Duration: 4 Weeks</p>
+            <h3>1400</h3>
+            <button onclick="enroll('Java OOP', 699)">Enroll</button>
+        </div>
+
+    </div>
+
+    <p id="message"></p>
+
+    <script>
+        function enroll(course, price) {
+            document.getElementById("message").innerText =
+                "Successfully Enrolled in " + course +
+                " | Price: ₹" + price;
+        }
+    </script>
+
+</body>
+</html>
